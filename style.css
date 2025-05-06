@@ -1,0 +1,101 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    margin-top: 15vh;
+    padding: 0 20px;
+}
+
+.text {
+    padding-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+button {
+    height: 50px;
+    width: 130px;
+    font-size: 20px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+}
+
+.win {
+    padding: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.score {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#reset {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+#reset:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 500px) {
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    button {
+        width: 90%;
+        max-width: 300px;
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+
+    .win,
+    .score {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    #reset {
+        width: 90%;
+        max-width: 200px;
+    }
+}
+
+.win.win {
+    color: green;
+}
+
+.win.lose {
+    color: red;
+}
+
+.win.draw {
+    color: gray;
+}
